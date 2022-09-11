@@ -9,6 +9,7 @@ import "./index.css";
 const App = () => (
   <>
     <Navbar></Navbar>
+    <h1>hiii</h1>
   </>
 );
 ReactDOM.render(<App />, document.getElementById("app"));
