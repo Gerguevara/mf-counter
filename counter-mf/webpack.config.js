@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "http://localhost:3002/",
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 3000,
+    port: 3002,
     historyApiFallback: true,
   },
 
@@ -41,14 +41,10 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "host",
+      name: "counter_mf",
       filename: "remoteEntry.js",
-      remotes: {
-        navbar: 'navbar@http://localhost:3001/remoteEntry.js',
-        counterReact:
-          "counter_mf@https://elaborate-crumble-973d08.netlify.app/remoteEntry.js",
-      },
-      exposes: {},
+      remotes: {},
+      exposes: { "./CounterReact": "./src/components/Counter.jsx",},
       shared: {
         ...deps,
         react: {
