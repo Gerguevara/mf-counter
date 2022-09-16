@@ -44,6 +44,8 @@ module.exports = {
       name: "counter_mf",
       filename: "remoteEntry.js",
       remotes: {},
+      //1ro nombre con el que usaremos nuectro componente en el HOST
+      // ruta donde se encuentra nustro componente
       exposes: { "./CounterReact": "./src/components/Counter.jsx",},
       shared: {
         ...deps,

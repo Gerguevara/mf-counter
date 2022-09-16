@@ -44,9 +44,9 @@ module.exports = {
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
+        // nombre mf que tendra local, nombre remoto + @ + remoteEntry.js url
         navbar: 'navbar@http://localhost:3001/remoteEntry.js',
-        counterReact:
-          "counter_mf@https://elaborate-crumble-973d08.netlify.app/remoteEntry.js",
+        counterReact:'counter_mf@http://localhost:3002/remoteEntry.js'
       },
       exposes: {},
       shared: {
