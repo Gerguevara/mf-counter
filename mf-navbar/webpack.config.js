@@ -46,6 +46,7 @@ module.exports = {
       remotes: {},
       exposes: {
         // nombre con que el componente se consumira + ruta de archivo
+        // influye si es un export default o no
         "./Navbar" :'./src/components/Navbar.jsx'
       },
       shared: {
